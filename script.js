@@ -1,12 +1,5 @@
-// const hex = document.getElementById("hex");
-// const $hexText = hex.firstElementChild;
-// $hexText.textContent = 127915
-
-// const emoji = document.getElementById("emoji");
-// const $emojiNumber = emoji.firstElementChild;
-// $emojiNumber.textContent = "&#127916;"
 const emoji = []
-const hex = [127928]
+const hex = 127928
 
 emoji.push(`
 <div class="container">
@@ -19,15 +12,21 @@ emoji.push(`
 </div>
 `)
 
-for (let i = 0; i < 50; i++){
-    emoji.push()
+for (let i = 1; i < 50; i++){
+    emoji.push(`
+    <div class="container">
+    <div id="emoji">
+    <p>&#${hex+i};</p>
+    </div>
+    <div id="hex">
+        <p>${hex+i}</p>
+    </div>
+    </div>
+    `)
 }
 
 const $icon = document.getElementById("flexbox");
 $icon.innerHTML = emoji.join('')
-
-// const $hex = document.getElementById("flexbox");
-// $hex.innerHTML = hex.join('')
 
 
 {/* <div class="container">
