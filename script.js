@@ -1,6 +1,7 @@
 const emoji = []
 const hex = 127928
 
+// creates html estructure to add emojis
 emoji.push(`
 <div class="container">
 <div id="emoji">
@@ -12,6 +13,7 @@ emoji.push(`
 </div>
 `)
 
+// loop to sum 1 at the hex code
 for (let i = 1; i < 50; i++){
     emoji.push(`
     <div class="container">
@@ -25,6 +27,7 @@ for (let i = 1; i < 50; i++){
     `)
 }
 
+// output the emojis
 const $icon = document.getElementById("flexbox");
 $icon.innerHTML = emoji.join('')
 
